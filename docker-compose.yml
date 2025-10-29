@@ -1,0 +1,14 @@
+services:
+  design-qa-challenge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: design-qa-challenge
+    container_name: design-qa-challenge
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./models:/working/models
+      - ./data:/working/data
