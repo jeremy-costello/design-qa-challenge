@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 
 
-MODEL_NAME = "unsloth/Qwen3-VL-4B-Instruct-unsloth-bnb-4bit"
+MODEL_NAME = "unsloth/Qwen3-VL-8B-Instruct-unsloth-bnb-4bit"
 MODEL_DIR = "./models"
 
 

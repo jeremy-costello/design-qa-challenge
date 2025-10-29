@@ -3,7 +3,7 @@ from PIL import Image
 
 def resize_image(
         image_path: str,
-        min_size: int = 448
+        min_size: int = 896
 ) -> Image.Image:
     """
     Resize an image while preserving aspect ratio so that its smallest side 

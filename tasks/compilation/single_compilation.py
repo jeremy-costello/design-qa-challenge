@@ -1,12 +1,11 @@
 import re
 from pathlib import Path
-from utils.keyword_search import search_by_keyword
 
 
 TERMS_REGEX = re.compile(r"`([^`]+)`")
 
 
-def extract_terms(
+def regex_term_extraction(
         question: str
 ):
     """
@@ -47,7 +46,7 @@ def find_matching_rules(
 
     for f in path.glob("*.txt"):
         text = f.read_text(encoding="utf-8")
-        if any(term in text for term in search_terms):
+        if any(term.lower() in text.lower() for term in search_terms):
             first_word = text.strip().split()[0]
             rule_numbers.append(first_word)
 
@@ -68,7 +67,7 @@ def get_prediction_for_question(
         str: A comma-separated string of rule numbers matching the extracted
         terms, or "blank" if no matches are found.
     """
-    search_terms = extract_terms(question)
+    search_terms = regex_term_extraction(question)
     if not search_terms:
         return "blank"
 

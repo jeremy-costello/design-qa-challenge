@@ -45,6 +45,7 @@ def extract_mechanical_parts(
 
     # Parse comma-separated list
     parts = [p.strip() for p in output_text.split(",") if p.strip()]
+    parts = list(set(parts))
     return parts
 
 
