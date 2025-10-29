@@ -14,7 +14,7 @@ My overall score is 0.735, beating the overall score of all baseline approaches.
 
 ### Detailed Scores
 
-| Approach | Retrieval | Compilation | Definition | Presence | Dimension | Functional Performance | Average |
+| Approach | Retrieval | Compilation | Definition | Presence | Dimension | Functional Performance | Overall |
 |-------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | Naive | 0.082 | 0.137 | 0.358 | 0.500 | 0.500 | 0.500 | 0.346 |
 | GPT-4-AllRules | 0.750 | 0.298 | 0.470 | 0.629 | 0.533 | 0.563 | 0.541 |
