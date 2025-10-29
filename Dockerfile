@@ -18,10 +18,10 @@ RUN uv python install 3.13
 RUN uv venv --python 3.13
 RUN uv sync --locked
 
-COPY ./tasks .
-COPY ./utils .
+COPY ./tasks ./tasks
+COPY ./utils ./utils
 COPY evaluate.sh .
 
-# RUN chmod +x evaluate.sh
+RUN chmod +x evaluate.sh
 
-CMD ["bash", "-c", "evaluate.sh"]
+CMD ["./evaluate.sh"]

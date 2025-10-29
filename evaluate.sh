@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./venv/bin/activate
+source .venv/bin/activate
 
 echo "Chunking rules text."
 python -m data.chunk_by_rule
@@ -21,6 +21,8 @@ python -m tasks.dimension.full_dimension
 
 echo "Running functional performance task."
 python -m tasks.func_perf.full_func_perf
+
+rm ./data/outputs/results.txt
 
 echo "Running Design QA evaluation."
 python ./vendor/design_qa/eval/full_evaluation.py \

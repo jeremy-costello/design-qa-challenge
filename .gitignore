@@ -14,5 +14,7 @@ data/chunks/*
 !data/chunks/.gitkeep
 data/outputs/*
 !data/outputs/.gitkeep
+models/*
+!models/.gitkeep
 vendor/*
 !vendor/.gitkeep
