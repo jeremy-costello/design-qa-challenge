@@ -1,6 +1,33 @@
 # design-qa-challenge
+Challenging the [Design QA Benchmark](https://github.com/anniedoris/design_qa).
 
-## Running the code
+---
+
+## My Results
+My results are in the ```my_outputs``` folder.
+
+I used Qwen3-VL-4B-Instruct quantized to 4 bits, along with some custom agent scaffolding.
+
+### Overall Score
+My overall score is 0.645, beating all baseline approaches but GPT-4o-AllRules.
+
+### Detailed Scores
+
+| Approach | Retrieval | Compilation | Definition | Presence | Dimension | Functional Performance | Average |
+|-------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| Naive | 0.082 | 0.137 | 0.358 | 0.500 | 0.500 | 0.500 | 0.346 |
+| GPT-4-AllRules | 0.750 | 0.298 | 0.470 | 0.629 | 0.533 | 0.563 | 0.541 |
+| GPT-4-RAG | 0.181 | 0.362 | 0.420 | 0.532 | 0.300 | 0.563 | 0.393 |
+| LLaVA-1.5-RAG | 0.112 | 0.281 | 0.393 | 0.484 | 0.408 | 0.536 | 0.369 |
+| Gemini-1.0-RAG | 0.000 | 0.283 | 0.488 | 0.548 | 0.525 | 0.438 | 0.456 |
+| Claude-Opus-RAG | 0.173 | 0.288 | 0.423 | 0.500 | 0.508 | 0.875 | 0.461 |
+| GPT-4o-AllRules | 0.881 | 0.424 | **0.540** | **0.726** | **0.825** | **0.938** | **0.722** |
+| GPT-4o-RAG | 0.185 | 0.376 | 0.525 | 0.710 | 0.675 | 0.750 | 0.537 |
+| **Qwen3-VL-4B-Agent (Mine)** | **0.970** | **0.458** | 0.481 | 0.661 | 0.550 | 0.750 | 0.645 |
+
+---
+
+## Running the Code
 Running this requires a GPU with sufficient VRAM for running [Qwen3-VL-4B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-unsloth-bnb-4bit).
 
 ### Docker
