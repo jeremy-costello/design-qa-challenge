@@ -59,6 +59,7 @@ If you're on Windows:
 - ```python -m tasks.retrieval.full_retrieval```
 - ```python -m tasks.compilation.full_compilation```
 - ```python -m tasks.definition.full_definition```
+  - This may take a while at the start since it has to download the VLM from Hugging Face.
 - ```python -m tasks.presence.full_presence```
 - ```python -m tasks.dimension.full_dimension```
 - ```python -m tasks.func_perf.full_func_perf```
