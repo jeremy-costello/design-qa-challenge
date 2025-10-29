@@ -12,3 +12,10 @@ services:
     volumes:
       - ./models:/working/models
       - ./data:/working/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
