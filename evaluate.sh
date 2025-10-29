@@ -33,3 +33,5 @@ python ./vendor/design_qa/eval/full_evaluation.py \
     --path_to_dimension ./data/outputs/dimension_predictions.csv \
     --path_to_functional_performance ./data/outputs/func_perf_predictions.csv \
     --save_path ./data/outputs/results.txt
+
+echo "Evaluation completed successfully. Results saved to './data/outputs/results.txt'."
