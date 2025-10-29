@@ -11,6 +11,7 @@ echo "Running compilation task."
 python -m tasks.compilation.full_compilation
 
 echo "Running definition task."
+echo "NOTE: This may take a while to intitialize, since it may have to download the VLM from Hugging Face"
 python -m tasks.definition.full_definition
 
 echo "Running presence task."
