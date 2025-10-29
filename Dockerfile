@@ -10,10 +10,7 @@ RUN git clone --depth 1 --single-branch \
     https://github.com/anniedoris/design_qa.git \
     ./vendor/design_qa
 
-COPY ./tasks .
-COPY ./utils .
 COPY .python-version .
-COPY evaluate.sh .
 COPY pyproject.toml .
 COPY uv.lock .
 
@@ -21,6 +18,10 @@ RUN uv python install 3.13
 RUN uv venv --python 3.13
 RUN uv sync --locked
 
-RUN chmod +x evaluate.sh
+COPY ./tasks .
+COPY ./utils .
+COPY evaluate.sh .
 
-CMD ["./evaluate.sh"]
+# RUN chmod +x evaluate.sh
+
+CMD ["bash", "-c", "evaluate.sh"]
