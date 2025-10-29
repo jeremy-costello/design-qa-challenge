@@ -10,12 +10,12 @@ wheels/
 .venv
 
 # Custom
-data/chunks/*
-!data/chunks/.gitkeep
-data/outputs/*
-!data/outputs/.gitkeep
-models/*
-!models/.gitkeep
-vendor/*
-!vendor/.gitkeep
-results.txt
+/data/chunks/*
+!/data/chunks/.gitkeep
+/data/outputs/*
+!/data/outputs/.gitkeep
+/models/*
+!/models/.gitkeep
+/vendor/*
+!/vendor/.gitkeep
+/results.txt
