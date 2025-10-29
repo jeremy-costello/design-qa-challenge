@@ -7,7 +7,7 @@ Challenging the [Design QA Benchmark](https://github.com/anniedoris/design_qa).
 My results are in the ```my_outputs``` folder.
 
 I used Qwen3-VL-4B-Instruct quantized to 4 bits, along with some custom agent scaffolding. \
-Images are downsized so the smaller side is 448 pixels.
+Images are downsized so the smaller side is 448 pixels (while preserving aspect ratio).
 
 ### Overall Score
 My overall score is 0.645, beating all baseline approaches but GPT-4o-AllRules.
