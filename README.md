@@ -10,7 +10,7 @@ I used Qwen3-VL-8B-Instruct quantized to 4 bits, along with some custom agent sc
 Images are downsized so the smaller side is 896 pixels (while preserving aspect ratio).
 
 ### Overall Score
-My overall score is 0.735, beating the average score of all baseline approaches.
+My overall score is 0.735, beating the overall score of all baseline approaches.
 
 ### Detailed Scores
 
