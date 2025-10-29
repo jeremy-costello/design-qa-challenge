@@ -6,11 +6,11 @@ Challenging the [Design QA Benchmark](https://github.com/anniedoris/design_qa).
 ## My Results
 My results are in the ```my_outputs``` folder.
 
-I used Qwen3-VL-4B-Instruct quantized to 4 bits, along with some custom agent scaffolding. \
-Images are downsized so the smaller side is 448 pixels (while preserving aspect ratio).
+I used Qwen3-VL-8B-Instruct quantized to 4 bits, along with some custom agent scaffolding. \
+Images are downsized so the smaller side is 896 pixels (while preserving aspect ratio).
 
 ### Overall Score
-My overall score is 0.645, beating all baseline approaches but GPT-4o-AllRules.
+My overall score is 0.735, beating the average score of all baseline approaches.
 
 ### Detailed Scores
 
@@ -22,14 +22,14 @@ My overall score is 0.645, beating all baseline approaches but GPT-4o-AllRules.
 | LLaVA-1.5-RAG | 0.112 | 0.281 | 0.393 | 0.484 | 0.408 | 0.536 | 0.369 |
 | Gemini-1.0-RAG | 0.000 | 0.283 | 0.488 | 0.548 | 0.525 | 0.438 | 0.456 |
 | Claude-Opus-RAG | 0.173 | 0.288 | 0.423 | 0.500 | 0.508 | 0.875 | 0.461 |
-| GPT-4o-AllRules | 0.881 | 0.424 | **0.540** | **0.726** | **0.825** | **0.938** | **0.722** |
+| GPT-4o-AllRules | 0.881 | 0.424 | 0.540 | **0.726** | **0.825** | **0.938** | 0.722 |
 | GPT-4o-RAG | 0.185 | 0.376 | 0.525 | 0.710 | 0.675 | 0.750 | 0.537 |
-| **Qwen3-VL-4B-Agent (Mine)** | **0.970** | **0.458** | 0.481 | 0.661 | 0.550 | 0.750 | 0.645 |
+| **Qwen3-VL-4B-Agent (Mine)** | **0.970** | **0.660** | **0.572** | 0.677 | 0.717 | 0.813 | **0.735** |
 
 ---
 
 ## Running the Code
-Running this requires a GPU with sufficient VRAM for running [Qwen3-VL-4B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-unsloth-bnb-4bit).
+Running this requires a GPU with sufficient VRAM for running [Qwen3-VL-8B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen3-VL-8B-Instruct-unsloth-bnb-4bit).
 
 ### Docker
 Requires [docker](https://docs.docker.com/engine/install/) and [nvidia container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
