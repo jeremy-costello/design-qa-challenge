@@ -77,14 +77,14 @@ If you're on Windows:
 ---
 
 ## Tunable Parameters
-System prompts:
+### System prompts
 - ```tasks/definition/single_definition.py```
 - ```tasks/presence/single_presence.py```
 - ```tasks/dimension/single_dimension.py```
 - ```tasks/func_perf/single_func_perf.py```
 - ```utils/mech_parts.py```
 
-Generation parameters:
+### Generation parameters
 - ```utils/call_vlm.py```
   - ```MODEL_NAME``` (which Qwen3 model to use)
     - could also change ```model = *.from_pretrained```, haven't tested it though
@@ -92,6 +92,6 @@ Generation parameters:
   - ```top_p``` (explained in temperature link)
   - ```top_k``` (explained in temperature link)
 
-Image parameters:
+### Image parameters
 - ```utils/image_utils.py```
   - ```min_size``` (number of pixels to downscale the smaller side of the image to, while preserving the aspect ratio)
