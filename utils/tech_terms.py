@@ -1,3 +1,5 @@
+# This file isn't used in my final system
+
 from utils.call_vlm import get_model_prediction
 from utils.prompt_builder import build_prompt
 
@@ -44,7 +46,6 @@ def extract_terms_of_interest(
         max_new_tokens=max_new_tokens,
     )
 
-    # Parse comma-separated list
     terms = [t.strip().lower() for t in output_text.split(",") if t.strip()]
     terms = list(set(terms))
     return terms

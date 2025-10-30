@@ -43,7 +43,6 @@ def extract_mechanical_parts(
         max_new_tokens=max_new_tokens,
     )
 
-    # Parse comma-separated list
     parts = [p.strip() for p in output_text.split(",") if p.strip()]
     parts = list(set(parts))
     return parts

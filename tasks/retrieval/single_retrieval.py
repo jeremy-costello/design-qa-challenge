@@ -19,6 +19,5 @@ def get_prediction_for_question(
     if not rule_map:
         return "blank"
 
-    # Combine all text chunks into a single string
     combined_text = " ".join(chunk for chunks in rule_map.values() for chunk in chunks)
     return combined_text or "blank"

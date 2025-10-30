@@ -1,4 +1,4 @@
-FROM astral/uv:bookworm-slim
+FROM astral/uv:0.9.4-bookworm-slim
 
 WORKDIR /working
 

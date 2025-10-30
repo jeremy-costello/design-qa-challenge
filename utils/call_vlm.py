@@ -83,7 +83,10 @@ def get_model_prediction(
         else:
             generated_ids = model.generate(
                 **inputs,
-                max_new_tokens=max_new_tokens
+                max_new_tokens=max_new_tokens,
+                temperature=0.7,
+                top_p=0.8,
+                top_k=20
             )
 
     # trims input tokens
