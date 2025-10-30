@@ -73,3 +73,25 @@ If you're on Windows:
     --path_to_functional_performance ./data/outputs/func_perf_predictions.csv \
     --save_path ./data/outputs/results.txt
   ```
+
+---
+
+## Tunable Parameters
+System prompts:
+- ```tasks/definition/single_definition.py```
+- ```tasks/presence/single_presence.py```
+- ```tasks/dimension/single_dimension.py```
+- ```tasks/func_perf/single_func_perf.py```
+- ```utils/mech_parts.py```
+
+Generation parameters:
+- ```utils/call_vlm.py```
+  - ```MODEL_NAME``` (which Qwen3 model to use)
+    - could also change ```model = *.from_pretrained```, haven't tested it though
+  - ```temperature``` (explained [here](https://www.ibm.com/think/topics/llm-temperature))
+  - ```top_p``` (explained in temperature link)
+  - ```top_k``` (explained in temperature link)
+
+Image parameters:
+- ```utils/image_utils.py```
+  - ```min_size``` (number of pixels to downscale the smaller side of the image to, while preserving the aspect ratio)
